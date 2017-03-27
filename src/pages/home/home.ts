@@ -4,6 +4,9 @@ import { NavController, LoadingController } from 'ionic-angular';
 
 import { Http } from '@angular/http'
 
+
+import { DetailsPage } from '../details/details';  
+
 import 'rxjs/add/operator/map'
 
 @Component({
@@ -42,7 +45,7 @@ export class HomePage {
 	}
 
 	itemSelected(feed){
-		alert(feed.data.url)
+		this.navCtrl.push(DetailsPage, { feed: feed });
 	}
 
 
